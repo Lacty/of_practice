@@ -4,6 +4,8 @@
 
 
 class ofApp : public ofBaseApp {
+private:
+  float angle;
 
 public:
   void setup();
