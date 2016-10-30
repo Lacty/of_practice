@@ -12,10 +12,14 @@ void ofApp::update() {
   // 改行入れなくて改行されるようだ
   ofLog() << "mouseX = " << mouseX;
   ofLog() << "mouseY = " << mouseY;
+  
+  pos.x += (mouseX - pos.x) * 0.1f;
+  pos.y += (mouseY - pos.y) * 0.1f;
 }
 
 //--------------------------------------------------------------
 void ofApp::draw() {
+  sphere.setPosition(pos);
   sphere.draw();
 }
 
@@ -32,7 +36,10 @@ void ofApp::mouseMoved(int x, int y ) {}
 void ofApp::mouseDragged(int x, int y, int button) {}
 
 //--------------------------------------------------------------
-void ofApp::mousePressed(int x, int y, int button) {}
+void ofApp::mousePressed(int x, int y, int button) {
+  pos = ofVec2f(ofRandom(ofGetWidth()),
+                ofRandom(ofGetHeight()));
+}
 
 //--------------------------------------------------------------
 void ofApp::mouseReleased(int x, int y, int button) {}
