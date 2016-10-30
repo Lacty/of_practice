@@ -5,6 +5,8 @@
 
 class ofApp : public ofBaseApp {
 private:
+  ofVec2f pos;
+
   ofSpherePrimitive sphere;
 
 public:

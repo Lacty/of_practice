@@ -8,7 +8,11 @@ void ofApp::setup() {
 }
 
 //--------------------------------------------------------------
-void ofApp::update() {}
+void ofApp::update() {
+  // 改行入れなくて改行されるようだ
+  ofLog() << "mouseX = " << mouseX;
+  ofLog() << "mouseY = " << mouseY;
+}
 
 //--------------------------------------------------------------
 void ofApp::draw() {
