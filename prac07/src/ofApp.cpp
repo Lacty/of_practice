@@ -9,7 +9,17 @@ void ofApp::setup() {}
 void ofApp::update() {}
 
 //--------------------------------------------------------------
-void ofApp::draw() {}
+void ofApp::draw() {
+  {
+    stringstream ss;
+    ss << "FPS > " << ofToString(ofGetFrameRate(), 0) << " <" << endl;
+    ofDrawBitmapString(ss.str(), 20, 20);
+    
+    // ofToString(T val, int precision);
+    // precision 制度
+    // 0で整数、1で小数点一位までに変換
+  }
+}
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key) {}
