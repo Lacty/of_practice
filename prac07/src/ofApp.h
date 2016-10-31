@@ -4,6 +4,9 @@
 
 
 class ofApp : public ofBaseApp {
+private:
+  ofTrueTypeFont font;
+
 public:
   void setup();
   void update();
