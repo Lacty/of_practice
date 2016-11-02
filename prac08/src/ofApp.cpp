@@ -24,19 +24,23 @@ void ofApp::setup() {
 
 //--------------------------------------------------------------
 void ofApp::update() {
+  
+  float elapsedTime = ofGetElapsedTimef();
+  
   //頂点の位置を更新
   for(int i = 0;i < Width;i++){
     for(int j = 0;j < Height;j++){
-      float x = sin(i * 0.1 + ofGetElapsedTimef()) * 1.0;
-      float y = sin(j * 0.15 + ofGetElapsedTimef()) * 10.0;
+      float x = sin(i * 0.1 + elapsedTime) * 1.0;
+      float y = sin(j * 0.15 + elapsedTime) * 10.0;
       float z = x + y;
       
-      vertices[j * Width + i] = ofVec3f(i - Width/2,j - Height/2,z);
+      vertices[j * Width + i] = ofVec3f(i - Width * 0.5,j - Height * 0.5,z);
     }
   }
   
   //頂点バッファ更新
   vbo.updateVertexData(vertices, NUM_PARTICLES);
+  
 }
 
 //--------------------------------------------------------------
