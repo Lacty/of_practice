@@ -4,58 +4,31 @@
 
 //--------------------------------------------------------------
 void ofApp::setup() {
-  ofBackground(0);
-  ofEnableDepthTest();
+  gui.setup();
   
-  cam.setDistance(50);
-  cam.setPosition(0, -50, 50);
-  cam.setTarget(ofVec3f(50, 50, 0));
-  
-  for (int i = 0; i < Width; i++) {
-    for (int j = 0; j < Height; j++) {
-      vertices[j * Width + i].set(i - Width * 0.5, j - Height * 0.5, 0);
-      colors[j * Width + i].set(0.5, 0.8, 1.0, 1.0);
-    }
-  }
-  
-  vbo.setVertexData(vertices, NUM_PARTICLES, GL_DYNAMIC_DRAW);
-  vbo.setColorData(colors, NUM_PARTICLES, GL_DYNAMIC_DRAW);
+  gui.add(size.setup("Size", 50, 0, 200));
+  gui.add(pos.setup("Position", ofVec2f(ofGetWidth() * 0.5f + 50, ofGetHeight() * 0.5f),
+                                ofVec2f(0, 0),                          // min
+                                ofVec2f(ofGetWidth(), ofGetHeight()))); //max
+  gui.add(color.setup("Color", ofColor(100, 255, 50),
+                               ofColor(0, 0, 0),
+                               ofColor(255, 255, 255)));
+  gui.add(label.setup("fps", ""));
 }
 
 //--------------------------------------------------------------
 void ofApp::update() {
-  
-  float elapsedTime = ofGetElapsedTimef();
-  
-  //頂点の位置を更新
-  for(int i = 0;i < Width;i++){
-    for(int j = 0;j < Height;j++){
-      float x = sin(i * 0.1 + elapsedTime) * 1.0;
-      float y = sin(j * 0.15 + elapsedTime) * 10.0;
-      float z = x + y;
-      
-      vertices[j * Width + i] = ofVec3f(i - Width * 0.5,j - Height * 0.5,z);
-    }
-  }
-  
-  //頂点バッファ更新
-  vbo.updateVertexData(vertices, NUM_PARTICLES);
+  label = ofToString(ofGetFrameRate(), 1);
 }
 
 //--------------------------------------------------------------
 void ofApp::draw() {
-  cam.begin();
+  ofBackgroundGradient(ofColor::white, ofColor::darkGray);
+
+  ofSetColor(color);
+  ofDrawBox(pos->x, pos->y, 0, size);
   
-  glPointSize(0.1f);
-  vbo.draw(GL_POINTS, 0, NUM_PARTICLES);
-  
-  cam.end();
-  
-  //ログ表示
-  string info;
-  info = "Vertex num = " + ofToString(NUM_PARTICLES,0) + "¥n";
-  info += "FPS =" + ofToString(ofGetFrameRate(),2);
-  ofDrawBitmapString(info, 30, 30);
+  gui.draw();
 }
 
 //--------------------------------------------------------------
