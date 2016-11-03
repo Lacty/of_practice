@@ -29,10 +29,28 @@ Particle* Particle::setGravity(const bool enable, const float g) {
 }
 
 
-void Particle::update() {
+void Particle::update(bool bound, float left, float right, float top, float bottom) {
   if (enableGravity) {
-    gravityVelocity.y += gravity;
-    velocity += gravityVelocity;
+    //gravityVelocity.y += gravity;
+    velocity.y += gravity;
+  }
+  if (bound) {
+    if (position.x > right) {
+      position.x = right;
+      velocity.x *= -0.9f;
+    }
+    if (position.x < left) {
+      position.x = left;
+      velocity.x *= -0.9f;
+    }
+    if (position.y > bottom) {
+      position.y = bottom;
+      velocity.y *= -0.9f;
+    }
+    if (position.y < top) {
+      position.y = top;
+      velocity.y *= -0.9;
+    }
   }
   position += velocity;
 }

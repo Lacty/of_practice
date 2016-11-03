@@ -30,6 +30,6 @@ public:
   Particle* setSize(const float size);
   Particle* setGravity(const bool enable, const float g);
   
-  void update();
+  void update(bool bound, float left, float right, float top, float bottom);
   void draw();
 };

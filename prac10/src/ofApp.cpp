@@ -10,7 +10,7 @@ void ofApp::setup() {
 //--------------------------------------------------------------
 void ofApp::update() {
   for (auto& part : particles) {
-    part.update();
+    part.update(true, 0, 460, 0, 300);
   }
 }
 
