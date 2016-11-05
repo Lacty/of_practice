@@ -25,10 +25,10 @@ void ofApp::update() {
 void ofApp::draw() {
   ofBackgroundGradient(ofColor::white, ofColor::darkGray);
 
-  //ofSetColor(color);
-  //ofDrawBox(pos->x, pos->y, 0, size);
+  ofSetColor(color);
+  ofDrawBox(pos->x, pos->y, 0, size);
   
-  //gui.draw();
+  gui.draw();
 }
 
 //--------------------------------------------------------------
