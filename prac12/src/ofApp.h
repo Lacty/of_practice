@@ -2,10 +2,17 @@
 #pragma once
 #include "ofMain.h"
 #include "ofxAssimpModelLoader.h"
+#include "ofxGui.h"
 
 
 class ofApp : public ofBaseApp {
 private:
+  ofxPanel gui;
+
+  ofxFloatSlider scale;
+  ofxVec3Slider  pos;
+  ofxVec3Slider  rot;
+
   ofxAssimpModelLoader model;
 
 public:
