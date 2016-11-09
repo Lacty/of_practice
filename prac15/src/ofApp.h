@@ -16,7 +16,8 @@ private:
   set<int> push_;
   set<int> press_;
   set<int> release_;
-  float    axis_[4];
+  
+  vector<float> axis_;
 
 public:
   JoyPad() = default;
@@ -37,7 +38,13 @@ public:
   }
   
   void update() {
-    
+    const float* axis = glfwGetJoystickAxes(id_, &axisNum_);
+    axis_ = vector<float>(&axis[0], &axis[axisNum_]);
+  }
+  
+  float getAxis(int num) const {
+    if (num > axisNum_) return 0;
+    return axis_[num];
   }
 };
 

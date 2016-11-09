@@ -9,7 +9,12 @@ void ofApp::setup() {
 }
 
 //--------------------------------------------------------------
-void ofApp::update() {}
+void ofApp::update() {
+  player1_.update();
+  
+  ofLog() << "player1 left axis X : " << player1_.getAxis(0);
+  ofLog() << "player1 left axis Y : " << player1_.getAxis(1);
+}
 
 //--------------------------------------------------------------
 void ofApp::draw() {}
