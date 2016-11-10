@@ -4,15 +4,17 @@
 
 //--------------------------------------------------------------
 void ofApp::setup() {
-  joy1_.setup(GLFW_JOYSTICK_1);
+  joy_.setup(GLFW_JOYSTICK_1);
 }
 
 //--------------------------------------------------------------
 void ofApp::update() {
-  joy1_.update();
+  joy_.update();
   
-  if (joy1_.isRelease(4)) {
-    ofLog() << "press 4";
+  for (int i = 0; i < joy_.getButtonNum(); i++) {
+    if (joy_.isPush(i)) {
+      ofLog() << "push " << i;
+    }
   }
 }
 

@@ -74,6 +74,22 @@ public:
     ofLog() << "Axis Num : " << axisNum_ << endl;
   }
   
+  int getId() const {
+    return id_;
+  }
+  
+  const string& getName() const {
+    return name_;
+  }
+  
+  int getButtonNum() const {
+    return buttonNum_;
+  }
+  
+  int getAxisNum() const {
+    return axisNum_;
+  }
+  
   void update() {
     updateState();
     updateAxis();
@@ -114,7 +130,7 @@ public:
 
 class ofApp : public ofBaseApp {
 private:
-  Joystick joy1_;
+  Joystick joy_;
 
 public:
   void setup();
