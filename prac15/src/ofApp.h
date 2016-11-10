@@ -7,6 +7,8 @@
 
 class JoyPad {
 private:
+  bool isConnect_;
+
   int    id_;
   string name_;
 
@@ -18,6 +20,15 @@ private:
   set<int> release_;
   
   vector<float> axis_;
+  
+  void updateState() {
+    isConnect_ = glfwJoystickPresent(id_);
+  }
+  
+  void updateAxis() {
+    const float* axis = glfwGetJoystickAxes(id_, &axisNum_);
+    axis_ = vector<float>(&axis[0], &axis[axisNum_]);
+  }
 
 public:
   JoyPad() = default;
@@ -31,18 +42,23 @@ public:
     name_ = glfwGetJoystickName(id_);
     glfwGetJoystickButtons(id_, &buttonNum_);
     glfwGetJoystickAxes(id_, &axisNum_);
-    
+
     ofLog() << "JoyPad connected : " << name_;
     ofLog() << "Button Num : " << buttonNum_;
     ofLog() << "Axis Num : " << axisNum_ << endl;
   }
   
   void update() {
-    const float* axis = glfwGetJoystickAxes(id_, &axisNum_);
-    axis_ = vector<float>(&axis[0], &axis[axisNum_]);
+    updateState();
+    updateAxis();
+  }
+  
+  bool isConnect() const {
+    return isConnect_;
   }
   
   float getAxis(int num) const {
+    if (!isConnect_) return 0;
     if (num > axisNum_) return 0;
     return axis_[num];
   }
@@ -51,7 +67,9 @@ public:
 class ofApp : public ofBaseApp {
 private:
   JoyPad player1_;
-  JoyPad player2_;
+  //JoyPad player2_;
+  
+  static void joystickCB(int joy, int event);
 
 public:
   void setup();

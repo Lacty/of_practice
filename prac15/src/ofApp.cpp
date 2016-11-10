@@ -4,16 +4,21 @@
 
 //--------------------------------------------------------------
 void ofApp::setup() {
-  player1_.setup(GLFW_JOYSTICK_1);
-  player2_.setup(GLFW_JOYSTICK_2);
+  //player1_.setup(GLFW_JOYSTICK_1);
+  //player2_.setup(GLFW_JOYSTICK_2);
+  
+  //glfwSetJoystickCallback(joystickCB);
 }
 
 //--------------------------------------------------------------
 void ofApp::update() {
-  player1_.update();
+  //player1_.update();
   
-  ofLog() << "player1 left axis X : " << player1_.getAxis(0);
-  ofLog() << "player1 left axis Y : " << player1_.getAxis(1);
+  //ofLog() << "player1 left axis X : " << player1_.getAxis(0);
+  //ofLog() << "player1 left axis Y : " << player1_.getAxis(1);
+  
+  ofLog() << "joy 0 : " << glfwJoystickPresent(0);
+  ofLog() << "joy 1 : " << glfwJoystickPresent(1);
 }
 
 //--------------------------------------------------------------
