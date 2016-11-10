@@ -7,7 +7,6 @@ void ofApp::setup() {}
 
 //--------------------------------------------------------------
 void ofApp::update() {
-  const unsigned char* button = glfwGetJoystickButtons(GLFW_JOYSTICK_1, &count);
   for (int i = 0; i < count; i++) {
     if (GLFW_PRESS == button[0]) {
       cout << "button 0 press" << endl;

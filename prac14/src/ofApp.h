@@ -4,6 +4,9 @@
 
 
 class ofApp : public ofBaseApp {
+private:
+  int count;
+  const unsigned char* button = glfwGetJoystickButtons(GLFW_JOYSTICK_1, &count);
 public:
   void setup();
   void update();
@@ -20,7 +23,4 @@ public:
   void windowResized(int w, int h);
   void dragEvent(ofDragInfo dragInfo);
   void gotMessage(ofMessage msg);
-  
-  
-  int count;
 };
