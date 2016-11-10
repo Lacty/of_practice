@@ -5,7 +5,7 @@
 #include <list>
 
 
-class JoyPad {
+class Joystick {
 private:
   bool isConnect_;
 
@@ -22,18 +22,44 @@ private:
   vector<float> axis_;
   
   void updateState() {
-    isConnect_ = glfwJoystickPresent(id_);
+    isConnect_ = (glfwJoystickPresent(id_) == GL_TRUE);
   }
   
   void updateAxis() {
-    const float* axis = glfwGetJoystickAxes(id_, &axisNum_);
+    static const float* axis = glfwGetJoystickAxes(id_, &axisNum_);
     axis_ = vector<float>(&axis[0], &axis[axisNum_]);
+  }
+  
+  void updateButton() {
+    push_.clear();
+    release_.clear();
+  
+    static const unsigned char* button = glfwGetJoystickButtons(id_, &buttonNum_);
+    
+    for (int i = 0; i < buttonNum_; i++) {
+      switch(button[i]) {
+        case GLFW_PRESS : {
+          if (press_.find(i) == press_.end()) {
+            push_.emplace(i);
+          }
+          press_.emplace(i);
+          break;
+        }
+        case GLFW_RELEASE : {
+          if (press_.find(i) != press_.end()) {
+            release_.emplace(i);
+            press_.erase(press_.find(i));
+          }
+          break;
+        }
+      }
+    }
   }
 
 public:
-  JoyPad() = default;
+  Joystick() = default;
 
-  explicit JoyPad(int JoyId) {
+  explicit Joystick(int JoyId) {
     setup(JoyId);
   }
   
@@ -51,6 +77,7 @@ public:
   void update() {
     updateState();
     updateAxis();
+    updateButton();
   }
   
   bool isConnect() const {
@@ -62,14 +89,32 @@ public:
     if (num > axisNum_) return 0;
     return axis_[num];
   }
+  
+  bool isPush(int button) const {
+    if (push_.find(button) == push_.end()) {
+      return false;
+    }
+    return true;
+  }
+  
+  bool isPress(int button) const {
+    if (press_.find(button) == press_.end()) {
+      return false;
+    }
+    return true;
+  }
+  
+  bool isRelease(int button) const {
+    if (release_.find(button) == release_.end()) {
+      return false;
+    }
+    return true;
+  }
 };
 
 class ofApp : public ofBaseApp {
 private:
-  JoyPad player1_;
-  //JoyPad player2_;
-  
-  static void joystickCB(int joy, int event);
+  Joystick joy1_;
 
 public:
   void setup();
