@@ -2,8 +2,6 @@
 #pragma once
 #include "ofMain.h"
 
-#include <list>
-
 
 class Joystick {
 private:
@@ -23,6 +21,9 @@ private:
   
   void updateState() {
     isConnect_ = (glfwJoystickPresent(id_) == GL_TRUE);
+    if (!isConnect_) {
+      name_ = glfwGetJoystickName(id_);
+    }
   }
   
   void updateAxis() {
@@ -65,6 +66,13 @@ public:
   
   void setup(int JoyId) {
     id_   = JoyId;
+  
+    updateState();
+    if (!isConnect_) {
+      ofLog() << "Joypad [" << id_ << "] : disconnected";
+      return;
+    }
+    
     name_ = glfwGetJoystickName(id_);
     glfwGetJoystickButtons(id_, &buttonNum_);
     glfwGetJoystickAxes(id_, &axisNum_);
