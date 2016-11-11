@@ -1,0 +1,13 @@
+<Joystick>
+  <ElecomWiredGamepad>
+    <Left>15</Left>
+    <Up>12</Up>
+    <Down>14</Down>
+    <Right>13</Right>
+
+    <Button1>0</Button1>
+    <Button2>1</Button2>
+    <Button3>2</Button3>
+    <Button4>3</Button4>
+  </ElecomWiredGamepad>
+</Joystick>
