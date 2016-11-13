@@ -1,0 +1,520 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		00DC2549C1E92F29D2753C82 /* ofxEasingElastic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FC848CB979B2120C322DA13D /* ofxEasingElastic.cpp */; };
+		154CE9D66799582EA8C6E53C /* ofxEasingBounce.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0C426E447B929C5DA6AC4C9D /* ofxEasingBounce.cpp */; };
+		17EF1C09FCC3A96B169CC023 /* ofxEasingQuint.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9F21D2475489E90F7D6BA639 /* ofxEasingQuint.cpp */; };
+		39B0F689ED97A68612760711 /* ofxEasingSine.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 89ADB246A16577F0B47605A3 /* ofxEasingSine.cpp */; };
+		400D3BC6C0C69D4ADCE04868 /* easing_terms_of_use.html in Sources */ = {isa = PBXBuildFile; fileRef = A5B24E0D7D01DF7CF8AAEF73 /* easing_terms_of_use.html */; };
+		52AB3B72C34B13E3C7001918 /* ofxTween.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B1B7E5F5911867EDC13799CE /* ofxTween.cpp */; };
+		6F74A6E319B9D9336A7DFA5F /* ofxEasingBack.cpp in Sources */ = {isa = PBXBuildFile; fileRef = EC439FD67B884662EB136DBE /* ofxEasingBack.cpp */; };
+		774FC4643F2383813A2F019C /* ofxEasing.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0791C8F0237813F0E4894526 /* ofxEasing.cpp */; };
+		7D47079E6F226228E38047A3 /* ofxEasingQuad.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3F408D1AA8239B1F81DB85DC /* ofxEasingQuad.cpp */; };
+		8F5EC090EB99C013D54F6F40 /* ofxEasingQuart.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 39AB1F782F9A0F8C2BA22B5E /* ofxEasingQuart.cpp */; };
+		A367B6831EA79D7AFBD3CA8E /* ofxSceneManager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 68CF7A9757F996FE4ADF8893 /* ofxSceneManager.cpp */; };
+		A5BBF3F6F22267A81B945DD7 /* ofxEasingCirc.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 502F8E2319B1A47D7277188E /* ofxEasingCirc.cpp */; };
+		AC9208801DD6A7E40083362E /* FirstScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC92087F1DD6A7E40083362E /* FirstScene.cpp */; };
+		AC9208851DD6AB170083362E /* SecondScene.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC9208841DD6AB170083362E /* SecondScene.cpp */; };
+		B2965D82B4E5AD82497AC499 /* ofxEasingCubic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 796C3872D052FFA8BE97100D /* ofxEasingCubic.cpp */; };
+		C2E8CAC9FB22FCE6B96D80A1 /* ofxEasingLinear.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C6499CFECEEB2FDF1D876A0C /* ofxEasingLinear.cpp */; };
+		D64A2F99AF240A85059AA514 /* ofxEasingExpo.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 27FED25215D9F02C1F9C9853 /* ofxEasingExpo.cpp */; };
+		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
+		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
+		E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		E4328147138ABC890047C5CB /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4B27C1510CBEB8E00536013;
+			remoteInfo = openFrameworks;
+		};
+		E4EEB9AB138B136A00A80321 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = E4B27C1410CBEB8E00536013;
+			remoteInfo = openFrameworks;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		E4C2427710CC5ABF004149E2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		0791C8F0237813F0E4894526 /* ofxEasing.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxEasing.cpp; path = ../of_v0.9.6_osx_release/addons/ofxTween/src/Easings/ofxEasing.cpp; sourceTree = SOURCE_ROOT; };
+		07B746852619430C1C190B4B /* ofxEasingSine.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxEasingSine.h; path = ../of_v0.9.6_osx_release/addons/ofxTween/src/Easings/ofxEasingSine.h; sourceTree = SOURCE_ROOT; };
+		0C426E447B929C5DA6AC4C9D /* ofxEasingBounce.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxEasingBounce.cpp; path = ../of_v0.9.6_osx_release/addons/ofxTween/src/Easings/ofxEasingBounce.cpp; sourceTree = SOURCE_ROOT; };
+		0EC5A9E277F7F1703C0B76ED /* ofxEasingQuart.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxEasingQuart.h; path = ../of_v0.9.6_osx_release/addons/ofxTween/src/Easings/ofxEasingQuart.h; sourceTree = SOURCE_ROOT; };
+		27FED25215D9F02C1F9C9853 /* ofxEasingExpo.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxEasingExpo.cpp; path = ../of_v0.9.6_osx_release/addons/ofxTween/src/Easings/ofxEasingExpo.cpp; sourceTree = SOURCE_ROOT; };
+		2D4195B91274281443043D27 /* ofxSceneManager.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxSceneManager.h; path = ../of_v0.9.6_osx_release/addons/ofxSceneManager/src/ofxSceneManager.h; sourceTree = SOURCE_ROOT; };
+		3367C78DE808B55DC6759A8E /* ofxEasingExpo.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxEasingExpo.h; path = ../of_v0.9.6_osx_release/addons/ofxTween/src/Easings/ofxEasingExpo.h; sourceTree = SOURCE_ROOT; };
+		39AB1F782F9A0F8C2BA22B5E /* ofxEasingQuart.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxEasingQuart.cpp; path = ../of_v0.9.6_osx_release/addons/ofxTween/src/Easings/ofxEasingQuart.cpp; sourceTree = SOURCE_ROOT; };
+		3C2A11228FB8C7FE01758C3B /* ofxEasingQuad.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxEasingQuad.h; path = ../of_v0.9.6_osx_release/addons/ofxTween/src/Easings/ofxEasingQuad.h; sourceTree = SOURCE_ROOT; };
+		3F408D1AA8239B1F81DB85DC /* ofxEasingQuad.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxEasingQuad.cpp; path = ../of_v0.9.6_osx_release/addons/ofxTween/src/Easings/ofxEasingQuad.cpp; sourceTree = SOURCE_ROOT; };
+		502F8E2319B1A47D7277188E /* ofxEasingCirc.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxEasingCirc.cpp; path = ../of_v0.9.6_osx_release/addons/ofxTween/src/Easings/ofxEasingCirc.cpp; sourceTree = SOURCE_ROOT; };
+		54207FAE7A253F83EC3D80FA /* ofxEasingCirc.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxEasingCirc.h; path = ../of_v0.9.6_osx_release/addons/ofxTween/src/Easings/ofxEasingCirc.h; sourceTree = SOURCE_ROOT; };
+		58B3387B65F72EE6D59891DF /* ofxEasingCubic.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxEasingCubic.h; path = ../of_v0.9.6_osx_release/addons/ofxTween/src/Easings/ofxEasingCubic.h; sourceTree = SOURCE_ROOT; };
+		64F7494146FDA9CEC439EF81 /* ofxEasingQuint.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxEasingQuint.h; path = ../of_v0.9.6_osx_release/addons/ofxTween/src/Easings/ofxEasingQuint.h; sourceTree = SOURCE_ROOT; };
+		68CF7A9757F996FE4ADF8893 /* ofxSceneManager.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxSceneManager.cpp; path = ../of_v0.9.6_osx_release/addons/ofxSceneManager/src/ofxSceneManager.cpp; sourceTree = SOURCE_ROOT; };
+		6F4A752458A1AFA3F16BD835 /* ofxEasingLinear.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxEasingLinear.h; path = ../of_v0.9.6_osx_release/addons/ofxTween/src/Easings/ofxEasingLinear.h; sourceTree = SOURCE_ROOT; };
+		796C3872D052FFA8BE97100D /* ofxEasingCubic.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxEasingCubic.cpp; path = ../of_v0.9.6_osx_release/addons/ofxTween/src/Easings/ofxEasingCubic.cpp; sourceTree = SOURCE_ROOT; };
+		89ADB246A16577F0B47605A3 /* ofxEasingSine.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxEasingSine.cpp; path = ../of_v0.9.6_osx_release/addons/ofxTween/src/Easings/ofxEasingSine.cpp; sourceTree = SOURCE_ROOT; };
+		8AFAE7991AF70978D78CFE72 /* ofxTween.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxTween.h; path = ../of_v0.9.6_osx_release/addons/ofxTween/src/ofxTween.h; sourceTree = SOURCE_ROOT; };
+		9F21D2475489E90F7D6BA639 /* ofxEasingQuint.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxEasingQuint.cpp; path = ../of_v0.9.6_osx_release/addons/ofxTween/src/Easings/ofxEasingQuint.cpp; sourceTree = SOURCE_ROOT; };
+		A5B24E0D7D01DF7CF8AAEF73 /* easing_terms_of_use.html */ = {isa = PBXFileReference; explicitFileType = file; fileEncoding = 30; name = easing_terms_of_use.html; path = ../of_v0.9.6_osx_release/addons/ofxTween/src/Easings/easing_terms_of_use.html; sourceTree = SOURCE_ROOT; };
+		AC92087E1DD6A7C50083362E /* FirstScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstScene.h; sourceTree = "<group>"; };
+		AC92087F1DD6A7E40083362E /* FirstScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FirstScene.cpp; sourceTree = "<group>"; };
+		AC9208831DD6AB090083362E /* SecondScene.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondScene.h; sourceTree = "<group>"; };
+		AC9208841DD6AB170083362E /* SecondScene.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SecondScene.cpp; sourceTree = "<group>"; };
+		B1B7E5F5911867EDC13799CE /* ofxTween.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxTween.cpp; path = ../of_v0.9.6_osx_release/addons/ofxTween/src/ofxTween.cpp; sourceTree = SOURCE_ROOT; };
+		C2BF0C9B250968497DA58BEA /* ofxEasing.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxEasing.h; path = ../of_v0.9.6_osx_release/addons/ofxTween/src/Easings/ofxEasing.h; sourceTree = SOURCE_ROOT; };
+		C6499CFECEEB2FDF1D876A0C /* ofxEasingLinear.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxEasingLinear.cpp; path = ../of_v0.9.6_osx_release/addons/ofxTween/src/Easings/ofxEasingLinear.cpp; sourceTree = SOURCE_ROOT; };
+		CC1B3CA6BE29DA1311C3EFBC /* ofxEasingBounce.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxEasingBounce.h; path = ../of_v0.9.6_osx_release/addons/ofxTween/src/Easings/ofxEasingBounce.h; sourceTree = SOURCE_ROOT; };
+		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../of_v0.9.6_osx_release/libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
+		E4B69B5B0A3A1756003C02F2 /* prac19Debug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = prac19Debug.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
+		E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofApp.cpp; path = src/ofApp.cpp; sourceTree = SOURCE_ROOT; };
+		E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.c.h; name = ofApp.h; path = src/ofApp.h; sourceTree = SOURCE_ROOT; };
+		E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = text.plist.xml; path = "openFrameworks-Info.plist"; sourceTree = "<group>"; };
+		E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; name = CoreOF.xcconfig; path = ../of_v0.9.6_osx_release/libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig; sourceTree = SOURCE_ROOT; };
+		E4EB6923138AFD0F00A09F29 /* Project.xcconfig */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xcconfig; path = Project.xcconfig; sourceTree = "<group>"; };
+		EBE6B90376ADA6F14A55E238 /* ofxEasingBack.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxEasingBack.h; path = ../of_v0.9.6_osx_release/addons/ofxTween/src/Easings/ofxEasingBack.h; sourceTree = SOURCE_ROOT; };
+		EC439FD67B884662EB136DBE /* ofxEasingBack.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxEasingBack.cpp; path = ../of_v0.9.6_osx_release/addons/ofxTween/src/Easings/ofxEasingBack.cpp; sourceTree = SOURCE_ROOT; };
+		F77EA2ADA72C2915642CDAAF /* ofxScene.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxScene.h; path = ../of_v0.9.6_osx_release/addons/ofxSceneManager/src/ofxScene.h; sourceTree = SOURCE_ROOT; };
+		F9E36790FB7C97CDB4932424 /* ofxEasingElastic.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxEasingElastic.h; path = ../of_v0.9.6_osx_release/addons/ofxTween/src/Easings/ofxEasingElastic.h; sourceTree = SOURCE_ROOT; };
+		FC848CB979B2120C322DA13D /* ofxEasingElastic.cpp */ = {isa = PBXFileReference; explicitFileType = sourcecode.cpp.cpp; fileEncoding = 30; name = ofxEasingElastic.cpp; path = ../of_v0.9.6_osx_release/addons/ofxTween/src/Easings/ofxEasingElastic.cpp; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		E4B69B590A3A1756003C02F2 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		0CB036595DE6BC2D33AB8FE1 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				F77EA2ADA72C2915642CDAAF /* ofxScene.h */,
+				68CF7A9757F996FE4ADF8893 /* ofxSceneManager.cpp */,
+				2D4195B91274281443043D27 /* ofxSceneManager.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		1F293A20D2B096D59C4F24DD /* ofxTween */ = {
+			isa = PBXGroup;
+			children = (
+				81B62DB6C371DAD643503FEF /* src */,
+			);
+			name = ofxTween;
+			sourceTree = "<group>";
+		};
+		6948EE371B920CB800B5AC1A /* local_addons */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = local_addons;
+			sourceTree = "<group>";
+		};
+		81B62DB6C371DAD643503FEF /* src */ = {
+			isa = PBXGroup;
+			children = (
+				B59DDD3C0EB9FFC71F28869B /* Easings */,
+				B1B7E5F5911867EDC13799CE /* ofxTween.cpp */,
+				8AFAE7991AF70978D78CFE72 /* ofxTween.h */,
+			);
+			name = src;
+			sourceTree = "<group>";
+		};
+		8D82EBF7DBCF242EC80B1CFF /* ofxSceneManager */ = {
+			isa = PBXGroup;
+			children = (
+				0CB036595DE6BC2D33AB8FE1 /* src */,
+			);
+			name = ofxSceneManager;
+			sourceTree = "<group>";
+		};
+		B59DDD3C0EB9FFC71F28869B /* Easings */ = {
+			isa = PBXGroup;
+			children = (
+				A5B24E0D7D01DF7CF8AAEF73 /* easing_terms_of_use.html */,
+				0791C8F0237813F0E4894526 /* ofxEasing.cpp */,
+				C2BF0C9B250968497DA58BEA /* ofxEasing.h */,
+				EC439FD67B884662EB136DBE /* ofxEasingBack.cpp */,
+				EBE6B90376ADA6F14A55E238 /* ofxEasingBack.h */,
+				0C426E447B929C5DA6AC4C9D /* ofxEasingBounce.cpp */,
+				CC1B3CA6BE29DA1311C3EFBC /* ofxEasingBounce.h */,
+				502F8E2319B1A47D7277188E /* ofxEasingCirc.cpp */,
+				54207FAE7A253F83EC3D80FA /* ofxEasingCirc.h */,
+				796C3872D052FFA8BE97100D /* ofxEasingCubic.cpp */,
+				58B3387B65F72EE6D59891DF /* ofxEasingCubic.h */,
+				FC848CB979B2120C322DA13D /* ofxEasingElastic.cpp */,
+				F9E36790FB7C97CDB4932424 /* ofxEasingElastic.h */,
+				27FED25215D9F02C1F9C9853 /* ofxEasingExpo.cpp */,
+				3367C78DE808B55DC6759A8E /* ofxEasingExpo.h */,
+				C6499CFECEEB2FDF1D876A0C /* ofxEasingLinear.cpp */,
+				6F4A752458A1AFA3F16BD835 /* ofxEasingLinear.h */,
+				3F408D1AA8239B1F81DB85DC /* ofxEasingQuad.cpp */,
+				3C2A11228FB8C7FE01758C3B /* ofxEasingQuad.h */,
+				39AB1F782F9A0F8C2BA22B5E /* ofxEasingQuart.cpp */,
+				0EC5A9E277F7F1703C0B76ED /* ofxEasingQuart.h */,
+				9F21D2475489E90F7D6BA639 /* ofxEasingQuint.cpp */,
+				64F7494146FDA9CEC439EF81 /* ofxEasingQuint.h */,
+				89ADB246A16577F0B47605A3 /* ofxEasingSine.cpp */,
+				07B746852619430C1C190B4B /* ofxEasingSine.h */,
+			);
+			name = Easings;
+			sourceTree = "<group>";
+		};
+		BB4B014C10F69532006C3DED /* addons */ = {
+			isa = PBXGroup;
+			children = (
+				8D82EBF7DBCF242EC80B1CFF /* ofxSceneManager */,
+				1F293A20D2B096D59C4F24DD /* ofxTween */,
+			);
+			name = addons;
+			sourceTree = "<group>";
+		};
+		E4328144138ABC890047C5CB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				E4328148138ABC890047C5CB /* openFrameworksDebug.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		E4B69B4A0A3A1720003C02F2 = {
+			isa = PBXGroup;
+			children = (
+				E4B6FCAD0C3E899E008CF71C /* openFrameworks-Info.plist */,
+				E4EB6923138AFD0F00A09F29 /* Project.xcconfig */,
+				E4B69E1C0A3A1BDC003C02F2 /* src */,
+				E4EEC9E9138DF44700A80321 /* openFrameworks */,
+				BB4B014C10F69532006C3DED /* addons */,
+				6948EE371B920CB800B5AC1A /* local_addons */,
+				E4B69B5B0A3A1756003C02F2 /* prac19Debug.app */,
+			);
+			sourceTree = "<group>";
+		};
+		E4B69E1C0A3A1BDC003C02F2 /* src */ = {
+			isa = PBXGroup;
+			children = (
+				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
+				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
+				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
+				AC92087E1DD6A7C50083362E /* FirstScene.h */,
+				AC92087F1DD6A7E40083362E /* FirstScene.cpp */,
+				AC9208831DD6AB090083362E /* SecondScene.h */,
+				AC9208841DD6AB170083362E /* SecondScene.cpp */,
+			);
+			path = src;
+			sourceTree = SOURCE_ROOT;
+		};
+		E4EEC9E9138DF44700A80321 /* openFrameworks */ = {
+			isa = PBXGroup;
+			children = (
+				E4EB691F138AFCF100A09F29 /* CoreOF.xcconfig */,
+				E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */,
+			);
+			name = openFrameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		E4B69B5A0A3A1756003C02F2 /* prac19 */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "prac19" */;
+			buildPhases = (
+				E4B69B580A3A1756003C02F2 /* Sources */,
+				E4B69B590A3A1756003C02F2 /* Frameworks */,
+				E4B6FFFD0C3F9AB9008CF71C /* ShellScript */,
+				E4C2427710CC5ABF004149E2 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				E4EEB9AC138B136A00A80321 /* PBXTargetDependency */,
+			);
+			name = prac19;
+			productName = myOFApp;
+			productReference = E4B69B5B0A3A1756003C02F2 /* prac19Debug.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		E4B69B4C0A3A1720003C02F2 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0600;
+			};
+			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "prac19" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+			);
+			mainGroup = E4B69B4A0A3A1720003C02F2;
+			productRefGroup = E4B69B4A0A3A1720003C02F2;
+			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = E4328144138ABC890047C5CB /* Products */;
+					ProjectRef = E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */;
+				},
+			);
+			projectRoot = "";
+			targets = (
+				E4B69B5A0A3A1756003C02F2 /* prac19 */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		E4328148138ABC890047C5CB /* openFrameworksDebug.a */ = {
+			isa = PBXReferenceProxy;
+			fileType = archive.ar;
+			path = openFrameworksDebug.a;
+			remoteRef = E4328147138ABC890047C5CB /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		E4B6FFFD0C3F9AB9008CF71C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "mkdir -p \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\n# Copy default icon file into App/Resources\nrsync -aved \"$ICON_FILE\" \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Resources/\"\n# Copy libfmod and change install directory for fmod to run\nrsync -aved ../of_v0.9.6_osx_release/libs/fmodex/lib/osx/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/\";\ninstall_name_tool -change @executable_path/libfmodex.dylib @executable_path/../Frameworks/libfmodex.dylib \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/MacOS/$PRODUCT_NAME\";\n# Copy GLUT framework (must remove for AppStore submissions)\nrsync -aved ../of_v0.9.6_osx_release/libs/glut/lib/osx/GLUT.framework \"$TARGET_BUILD_DIR/$PRODUCT_NAME.app/Contents/Frameworks/\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		E4B69B580A3A1756003C02F2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
+				A367B6831EA79D7AFBD3CA8E /* ofxSceneManager.cpp in Sources */,
+				400D3BC6C0C69D4ADCE04868 /* easing_terms_of_use.html in Sources */,
+				774FC4643F2383813A2F019C /* ofxEasing.cpp in Sources */,
+				AC9208801DD6A7E40083362E /* FirstScene.cpp in Sources */,
+				6F74A6E319B9D9336A7DFA5F /* ofxEasingBack.cpp in Sources */,
+				154CE9D66799582EA8C6E53C /* ofxEasingBounce.cpp in Sources */,
+				A5BBF3F6F22267A81B945DD7 /* ofxEasingCirc.cpp in Sources */,
+				B2965D82B4E5AD82497AC499 /* ofxEasingCubic.cpp in Sources */,
+				00DC2549C1E92F29D2753C82 /* ofxEasingElastic.cpp in Sources */,
+				D64A2F99AF240A85059AA514 /* ofxEasingExpo.cpp in Sources */,
+				C2E8CAC9FB22FCE6B96D80A1 /* ofxEasingLinear.cpp in Sources */,
+				7D47079E6F226228E38047A3 /* ofxEasingQuad.cpp in Sources */,
+				8F5EC090EB99C013D54F6F40 /* ofxEasingQuart.cpp in Sources */,
+				17EF1C09FCC3A96B169CC023 /* ofxEasingQuint.cpp in Sources */,
+				AC9208851DD6AB170083362E /* SecondScene.cpp in Sources */,
+				39B0F689ED97A68612760711 /* ofxEasingSine.cpp in Sources */,
+				52AB3B72C34B13E3C7001918 /* ofxTween.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		E4EEB9AC138B136A00A80321 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = openFrameworks;
+			targetProxy = E4EEB9AB138B136A00A80321 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		E4B69B4E0A3A1720003C02F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
+				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					../of_v0.9.6_osx_release/addons/ofxSceneManager/src,
+					../of_v0.9.6_osx_release/addons/ofxTween/src,
+					../of_v0.9.6_osx_release/addons/ofxTween/src/Easings,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				ONLY_ACTIVE_ARCH = YES;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACOSX_CORE__",
+					"-mtune=native",
+				);
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		E4B69B4F0A3A1720003C02F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
+				COPY_PHASE_STRIP = YES;
+				DEAD_CODE_STRIPPING = YES;
+				GCC_AUTO_VECTORIZATION = YES;
+				GCC_ENABLE_SSE3_EXTENSIONS = YES;
+				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_UNROLL_LOOPS = YES;
+				GCC_WARN_ABOUT_DEPRECATED_FUNCTIONS = YES;
+				GCC_WARN_ABOUT_INVALID_OFFSETOF_MACRO = NO;
+				GCC_WARN_ALLOW_INCOMPLETE_PROTOCOL = NO;
+				GCC_WARN_UNINITIALIZED_AUTOS = NO;
+				GCC_WARN_UNUSED_VALUE = NO;
+				GCC_WARN_UNUSED_VARIABLE = NO;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					../of_v0.9.6_osx_release/addons/ofxSceneManager/src,
+					../of_v0.9.6_osx_release/addons/ofxTween/src,
+					../of_v0.9.6_osx_release/addons/ofxTween/src/Easings,
+				);
+				MACOSX_DEPLOYMENT_TARGET = 10.8;
+				OTHER_CPLUSPLUSFLAGS = (
+					"-D__MACOSX_CORE__",
+					"-mtune=native",
+				);
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		E4B69B600A3A1757003C02F2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../of_v0.9.6_osx_release/libs/glut/lib/osx\"";
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = NONE;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					../of_v0.9.6_osx_release/addons/ofxSceneManager/src,
+					../of_v0.9.6_osx_release/addons/ofxTween/src,
+					../of_v0.9.6_osx_release/addons/ofxTween/src/Easings,
+				);
+				ICON = "$(ICON_NAME_DEBUG)";
+				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
+				INFOPLIST_FILE = "openFrameworks-Info.plist";
+				INSTALL_PATH = /Applications;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)Debug";
+				WRAPPER_EXTENSION = app;
+			};
+			name = Debug;
+		};
+		E4B69B610A3A1757003C02F2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4EB6923138AFD0F00A09F29 /* Project.xcconfig */;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1)",
+				);
+				FRAMEWORK_SEARCH_PATHS_QUOTED_FOR_TARGET_1 = "\"$(SRCROOT)/../of_v0.9.6_osx_release/libs/glut/lib/osx\"";
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_MODEL_TUNING = NONE;
+				HEADER_SEARCH_PATHS = (
+					"$(OF_CORE_HEADERS)",
+					../of_v0.9.6_osx_release/addons/ofxSceneManager/src,
+					../of_v0.9.6_osx_release/addons/ofxTween/src,
+					../of_v0.9.6_osx_release/addons/ofxTween/src/Easings,
+				);
+				ICON = "$(ICON_NAME_RELEASE)";
+				ICON_FILE = "$(ICON_FILE_PATH)$(ICON)";
+				INFOPLIST_FILE = "openFrameworks-Info.plist";
+				INSTALL_PATH = /Applications;
+				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				WRAPPER_EXTENSION = app;
+				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "prac19" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B69B4E0A3A1720003C02F2 /* Debug */,
+				E4B69B4F0A3A1720003C02F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E4B69B5F0A3A1757003C02F2 /* Build configuration list for PBXNativeTarget "prac19" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E4B69B600A3A1757003C02F2 /* Debug */,
+				E4B69B610A3A1757003C02F2 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = E4B69B4C0A3A1720003C02F2 /* Project object */;
+}
