@@ -21,12 +21,18 @@ public:
 
 class DuckingState : public PlayerState {
 public:
+  DuckingState(Player& player);
+
   shared_ptr<PlayerState> handleInput(Player& player, ofxJoystick& input) override;
   void update(Player& player) override;
 };
 
 class JumpingState : public PlayerState {
+private:
+  ofVec2f vel_;
+  
 public:
+  JumpingState(Player& player);
   shared_ptr<PlayerState> handleInput(Player& player, ofxJoystick& input) override;
   void update(Player& player) override;
 };
