@@ -1,10 +1,14 @@
 
 #pragma once
 #include "ofMain.h"
-#include "gpp.h"
+#include "playerState.h"
+#include "player.h"
 
 
 class ofApp : public ofBaseApp {
+private:
+  Player player_;
+  
 public:
   void setup();
   void update();

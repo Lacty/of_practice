@@ -9,7 +9,9 @@ void ofApp::setup() {}
 void ofApp::update() {}
 
 //--------------------------------------------------------------
-void ofApp::draw() {}
+void ofApp::draw() {
+  player_.update();
+}
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key) {}

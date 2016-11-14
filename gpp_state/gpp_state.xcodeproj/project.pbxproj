@@ -8,6 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		34E05DAC8A2E2C61D594D4D8 /* ofxJoystick.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F87429BE4D84BD7B890DB84A /* ofxJoystick.cpp */; };
+		AC24DB821DDA560000D7AB77 /* playerState.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC24DB811DDA560000D7AB77 /* playerState.cpp */; };
+		AC24DB841DDA567300D7AB77 /* player.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC24DB831DDA567300D7AB77 /* player.cpp */; };
 		E4328149138ABC9F0047C5CB /* openFrameworksDebug.a in Frameworks */ = {isa = PBXBuildFile; fileRef = E4328148138ABC890047C5CB /* openFrameworksDebug.a */; };
 		E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1D0A3A1BDC003C02F2 /* main.cpp */; };
 		E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */; };
@@ -44,7 +46,10 @@
 
 /* Begin PBXFileReference section */
 		040970DDB0A766E52292AC1F /* ofxJoystick.h */ = {isa = PBXFileReference; explicitFileType = sourcecode.c.h; fileEncoding = 30; name = ofxJoystick.h; path = ../of_v0.9.6_osx_release/addons/ofxJoystick/src/ofxJoystick.h; sourceTree = SOURCE_ROOT; };
-		AC24DB7E1DDA3A0200D7AB77 /* gpp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = gpp.h; sourceTree = "<group>"; };
+		AC24DB7F1DDA54B400D7AB77 /* player.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = player.h; sourceTree = "<group>"; };
+		AC24DB801DDA54C400D7AB77 /* playerState.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = playerState.h; sourceTree = "<group>"; };
+		AC24DB811DDA560000D7AB77 /* playerState.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = playerState.cpp; sourceTree = "<group>"; };
+		AC24DB831DDA567300D7AB77 /* player.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = player.cpp; sourceTree = "<group>"; };
 		E4328143138ABC890047C5CB /* openFrameworksLib.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = openFrameworksLib.xcodeproj; path = ../of_v0.9.6_osx_release/libs/openFrameworksCompiled/project/osx/openFrameworksLib.xcodeproj; sourceTree = SOURCE_ROOT; };
 		E4B69B5B0A3A1756003C02F2 /* gpp_stateDebug.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = gpp_stateDebug.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E4B69E1D0A3A1BDC003C02F2 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 30; lastKnownFileType = sourcecode.cpp.cpp; name = main.cpp; path = src/main.cpp; sourceTree = SOURCE_ROOT; };
@@ -127,7 +132,10 @@
 				E4B69E1D0A3A1BDC003C02F2 /* main.cpp */,
 				E4B69E1E0A3A1BDC003C02F2 /* ofApp.cpp */,
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
-				AC24DB7E1DDA3A0200D7AB77 /* gpp.h */,
+				AC24DB7F1DDA54B400D7AB77 /* player.h */,
+				AC24DB831DDA567300D7AB77 /* player.cpp */,
+				AC24DB801DDA54C400D7AB77 /* playerState.h */,
+				AC24DB811DDA560000D7AB77 /* playerState.cpp */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -169,7 +177,7 @@
 		E4B69B4C0A3A1720003C02F2 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0600;
+				LastUpgradeCheck = 0730;
 			};
 			buildConfigurationList = E4B69B4D0A3A1720003C02F2 /* Build configuration list for PBXProject "gpp_state" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -229,7 +237,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				AC24DB841DDA567300D7AB77 /* player.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
+				AC24DB821DDA560000D7AB77 /* playerState.cpp in Sources */,
 				34E05DAC8A2E2C61D594D4D8 /* ofxJoystick.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +262,7 @@
 				CONFIGURATION_BUILD_DIR = "$(SRCROOT)/bin/";
 				COPY_PHASE_STRIP = NO;
 				DEAD_CODE_STRIPPING = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_AUTO_VECTORIZATION = YES;
 				GCC_ENABLE_SSE3_EXTENSIONS = YES;
 				GCC_ENABLE_SUPPLEMENTAL_SSE3_INSTRUCTIONS = YES;
@@ -337,6 +348,7 @@
 				INFOPLIST_FILE = "openFrameworks-Info.plist";
 				INSTALL_PATH = /Applications;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = cc.openFrameworks.ofapp;
 				PRODUCT_NAME = "$(TARGET_NAME)Debug";
 				WRAPPER_EXTENSION = app;
 			};
@@ -365,6 +377,7 @@
 				INFOPLIST_FILE = "openFrameworks-Info.plist";
 				INSTALL_PATH = /Applications;
 				LIBRARY_SEARCH_PATHS = "$(inherited)";
+				PRODUCT_BUNDLE_IDENTIFIER = cc.openFrameworks.ofapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				WRAPPER_EXTENSION = app;
 				baseConfigurationReference = E4EB6923138AFD0F00A09F29;
