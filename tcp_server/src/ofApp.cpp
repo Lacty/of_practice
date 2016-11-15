@@ -4,32 +4,29 @@
 
 //--------------------------------------------------------------
 void ofApp::setup() {
-  ofSetFrameRate(30);
-
-  tcp_.setup("127.0.0.1", 88888);
-  
-  deltaTime   = 0;
-  connectTime = 0;
+  tcp_.setup(88888);
 }
 
 //--------------------------------------------------------------
 void ofApp::update() {
-  if (!tcp_.isConnected()) {
-    deltaTime = ofGetElapsedTimeMillis() - connectTime;
-    if (deltaTime > 5000) {
-      tcp_.setup("127.0.0.1", 88888);
-      connectTime = ofGetElapsedTimeMillis();
+  for (unsigned int i = 0; i < tcp_.getLastID(); i++) {
+    if (tcp_.isClientConnected(i)) {
+      string str = tcp_.receive(i);
+      if (str.length()) {
+        xml_.loadFromBuffer(str.c_str());
+      }
     }
   }
 }
 
 //--------------------------------------------------------------
 void ofApp::draw() {
-  if (tcp_.isConnected()) {
-    ofDrawBitmapString("status : connecting", 20, 20);
-  } else {
-    ofDrawBitmapString("status : disconnecting", 20, 20);
-    ofDrawBitmapString("reconnect at " + ofToString(deltaTime / 1000), 20, 40);
+  for (unsigned int i = 0; i < tcp_.getLastID(); i++) {
+    if (tcp_.isClientConnected(i)) {
+      ofDrawBitmapString("connect id " + ofToString(i), 20, 20);
+      ofDrawBitmapString("posX : " + ofToString(xml_.getValue("posX", 0)), 20, 40);
+      ofDrawBitmapString("posY : " + ofToString(xml_.getValue("posY", 0)), 20, 60);
+    }
   }
 }
 
@@ -40,19 +37,7 @@ void ofApp::keyPressed(int key) {}
 void ofApp::keyReleased(int key) {}
 
 //--------------------------------------------------------------
-void ofApp::mouseMoved(int x, int y ) {
-  if (tcp_.isConnected()) {
-    xml_.clear();
-    //xml_.pushTag("PT");
-    xml_.setValue("posX", x);
-    xml_.setValue("posY", y);
-    //xml_.popTag();
-    string msg;
-    xml_.copyXmlToString(msg);
-    ofLog() << msg;
-    tcp_.send(msg);
-  }
-}
+void ofApp::mouseMoved(int x, int y ) {}
 
 //--------------------------------------------------------------
 void ofApp::mouseDragged(int x, int y, int button) {}
