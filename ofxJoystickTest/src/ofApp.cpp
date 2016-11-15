@@ -13,16 +13,19 @@ void ofApp::update() {
   
   // chack all button for push
   for (int i = 0; i < joy_.getButtonNum(); i++) {
-    if (joy_.isPush(i)) {
-      ofLog() << "push :" << i;
+    if (joy_.isPressed(i)) {
+      ofLog() << "pressed :" << i;
+    }
+    if (joy_.isPushing(i)) {
+      ofLog() << "pushing : " << i;
     }
   }
   
   // get left X axis
-  ofLog() << "left X axis :" << joy_.getAxis(0);
+  //ofLog() << "left X axis :" << joy_.getAxis(0);
   
   // get left Y axis
-  ofLog() << "left Y axis :" << joy_.getAxis(1);
+  //ofLog() << "left Y axis :" << joy_.getAxis(1);
 }
 
 //--------------------------------------------------------------
