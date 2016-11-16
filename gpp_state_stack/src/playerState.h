@@ -1,7 +1,6 @@
 
 #pragma once
 #include "ofxJoystick.h"
-#include <type_traits>
 
 
 class Player;

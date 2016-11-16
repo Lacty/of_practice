@@ -2,6 +2,7 @@
 #include "playerState.h"
 #include "player.h"
 
+
 shared_ptr<PlayerState> PlayerState::finish = make_shared<PlayerState>();
 
 shared_ptr<PlayerState> StandingState::handleInput(Player& player, ofxJoystick& input) {
