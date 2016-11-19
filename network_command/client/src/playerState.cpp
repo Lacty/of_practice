@@ -9,18 +9,18 @@ shared_ptr<PlayerState> StandingState::handleInput(Player& player, Input& input)
   
   // to Jump
   if (input.isPressed("Jump")) {
-    ofLog() << "standing -> jumping";
+    //ofLog() << "standing -> jumping";
     player.addState(make_shared<MovingState>());
     return make_shared<JumpingState>();
   }
   
   // to Move
   if (input.isPressed("Left")) {
-    ofLog() << "standing -> moving";
+    //ofLog() << "standing -> moving";
     return make_shared<MovingState>();
   }
   if (input.isPressed("Right")) {
-    ofLog() << "standing -> moving";
+    //ofLog() << "standing -> moving";
     return make_shared<MovingState>();
   }
   
@@ -35,12 +35,12 @@ shared_ptr<PlayerState> MovingState::handleInput(Player& player, Input& input) {
   if (!input.isPushing("Left") &&
       !input.isPushing("Right"))
   {
-    ofLog() << "moving -> back to previous";
+    //ofLog() << "moving -> back to previous";
     return PlayerState::finish;
   }
   
   if (input.isPressed("Jump")) {
-    ofLog() << "moving -> jumping";
+    //ofLog() << "moving -> jumping";
     return make_shared<JumpingState>();
   }
   
@@ -65,7 +65,7 @@ void MovingState::entry(Player& player) {}
 const int FLOOR = 0;
 shared_ptr<PlayerState> JumpingState::handleInput(Player& player, Input& input) {
   if (player.getPos().y <= FLOOR) {
-    ofLog() << "jumping -> back to previous";
+    //ofLog() << "jumping -> back to previous";
     return PlayerState::finish;
   }
   

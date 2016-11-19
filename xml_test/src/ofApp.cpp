@@ -4,33 +4,28 @@
 
 //--------------------------------------------------------------
 void ofApp::setup() {
-  ofSetFrameRate(60);
-  tcp_.setup(88888);
-
-  start = ofGetElapsedTimef();
-}
-
-//--------------------------------------------------------------
-void ofApp::update() {
-  for (unsigned int i = 0; i < tcp_.getLastID(); i++) {
-    if (tcp_.isClientConnected(i)) {
-      string str = tcp_.receive(i);
-      ofLog() << str;
-      tcp_.send(i, str);
-    }
-  }
-}
-
-//--------------------------------------------------------------
-void ofApp::draw() {
-  for (unsigned int i = 0; i < tcp_.getLastID(); i++) {
-    if (tcp_.isClientConnected(i)) {
-      ofDrawBitmapString("connect id " + ofToString(i), 20, 20);
-    }
-  }
+  ofxXmlSettings xml;
+  xml.addTag("Game");
   
-  ofDrawBitmapString("keika : " + ofToString(ofGetElapsedTimef() - start, 2), 20, 20);
+  if (xml.pushTag("Game")) {
+    xml.addTag("TimeLimit");
+    
+    if (xml.pushTag("TimeLimit")) {
+      xml.addValue("MaxTime", 40);
+      
+      xml.popTag();
+    }
+    xml.popTag();
+  }
+
+  xml.save("Game/settings.xml");
 }
+
+//--------------------------------------------------------------
+void ofApp::update() {}
+
+//--------------------------------------------------------------
+void ofApp::draw() {}
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key) {}

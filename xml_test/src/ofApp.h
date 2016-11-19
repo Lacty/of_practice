@@ -2,35 +2,11 @@
 #pragma once
 #include "ofMain.h"
 #include "ofxXmlSettings.h"
-#include "ofxTCPClient.h"
-#include "ofxJoystick.h"
-
-#include "player.h"
-#include "input.h"
 
 
 class ofApp : public ofBaseApp {
 private:
-  Player player_;
-  Input playerInput_;
-  
-  Player other_;
-  Input otherInput_;
-
   ofxXmlSettings xml_;
-  ofxJoystick joy_;
-  
-  ofCamera cam_;
-  
-  ofxTCPClient tcp_;
-  int deltaTime;
-  int connectTime;
-  
-  void reconnect();
-  void updateInput();
-  
-  void send();
-  void recv();
 
 public:
   void setup();

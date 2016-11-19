@@ -19,6 +19,10 @@ void ofApp::setup() {
   playerInput_.addName("Left",  LEFT);
   playerInput_.addName("Right", RIGHT);
   
+  otherInput_.addName("Jump",  JUMP);
+  otherInput_.addName("Left",  LEFT);
+  otherInput_.addName("Right", RIGHT);
+  
   cam_.setPosition(0, 0, 300);
   
   tcp_.setup("127.0.0.1", 88888);
@@ -31,7 +35,56 @@ void ofApp::setup() {
 void ofApp::update() {
   updateInput();
   player_.update(playerInput_);
+  //send();
   
+  //recv();
+  //other_.update(otherInput_);
+  
+  if (otherInput_.isPressed("Jump")) {
+    ofLog() << "jump";
+  }
+
+  playerInput_.clear();
+  otherInput_.clear();
+}
+
+//--------------------------------------------------------------
+void ofApp::draw() {
+  cam_.begin();
+  ofSetColor(255, 255, 255);
+  player_.draw();
+  ofSetColor(255, 0, 0);
+  //other_.draw();
+  cam_.end();
+  
+  //reconnect();
+}
+
+void ofApp::reconnect() {
+  if (!tcp_.isConnected()) {
+    deltaTime = ofGetElapsedTimeMillis() - connectTime;
+    if (deltaTime > 5000) {
+      tcp_.setup("127.0.0.1", 88888);
+      connectTime = ofGetElapsedTimeMillis();
+    }
+  }
+  if (tcp_.isConnected()) {
+    ofDrawBitmapString("status : connecting", 20, 20);
+  } else {
+    ofDrawBitmapString("status : disconnecting", 20, 20);
+    ofDrawBitmapString("reconnect at " + ofToString(deltaTime / 1000), 20, 40);
+  }
+}
+
+void ofApp::updateInput() {
+  for (int i = 0; i < joy_.getButtonNum(); i++) {
+    if (joy_.isPressed(i)) { playerInput_.setPressed(i); }
+    if (joy_.isPushing(i)) { playerInput_.setPushing(i); }
+    if (joy_.isRelease(i)) { playerInput_.setRelease(i); }
+  }
+}
+
+void ofApp::send() {
   if (tcp_.isConnected()) {
     {
       ofxXmlSettings xml;
@@ -69,41 +122,31 @@ void ofApp::update() {
       tcp_.send(str);
     }
   }
-  other_.update(otherInput_);
-  
-  playerInput_.clear();
 }
 
-//--------------------------------------------------------------
-void ofApp::draw() {
-  cam_.begin();
-  player_.draw();
-  cam_.end();
-  
-  reconnect();
-}
-
-void ofApp::reconnect() {
-  if (!tcp_.isConnected()) {
-    deltaTime = ofGetElapsedTimeMillis() - connectTime;
-    if (deltaTime > 5000) {
-      tcp_.setup("127.0.0.1", 88888);
-      connectTime = ofGetElapsedTimeMillis();
-    }
-  }
+void ofApp::recv() {
   if (tcp_.isConnected()) {
-    ofDrawBitmapString("status : connecting", 20, 20);
-  } else {
-    ofDrawBitmapString("status : disconnecting", 20, 20);
-    ofDrawBitmapString("reconnect at " + ofToString(deltaTime / 1000), 20, 40);
-  }
-}
-
-void ofApp::updateInput() {
-  for (int i = 0; i < joy_.getButtonNum(); i++) {
-    if (joy_.isPressed(i)) { playerInput_.setPressed(i); }
-    if (joy_.isPushing(i)) { playerInput_.setPushing(i); }
-    if (joy_.isRelease(i)) { playerInput_.setRelease(i); }
+    string str = tcp_.receive();
+    //ofLog() << str;
+    
+    ofxXmlSettings xml;
+    xml.loadFromBuffer(str);
+    
+    xml.pushTag("Buttons");
+    int numOfButton = xml.getNumTags("Button");
+    for (int i = 0; i < numOfButton; i++) {
+      xml.pushTag("Button", i);
+      
+      string name = xml.getValue("Pressed", "none");
+      if (name != "none") { otherInput_.setPressed(name); }//ofLog() <<"Pressed"<< name;}
+      name = xml.getValue("Pushing", "none");
+      if (name != "none") { otherInput_.setPushing(name); }//ofLog() <<"Pushing"<< name;}
+      name = xml.getValue("Release", "none");
+      if (name != "none") { otherInput_.setRelease(name); }//ofLog() <<"Release"<< name;}
+      xml.popTag();
+    }
+    if (otherInput_.isPushing("Jump")) { ofLog() << "jump"; }
+    xml.popTag();
   }
 }
 

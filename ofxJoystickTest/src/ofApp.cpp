@@ -15,7 +15,7 @@ void ofApp::update() {
       ofLog() << "pressed :" << i;
     }
     if (joy_.isPushing(i)) {
-      ofLog() << "pushing : " << i;
+      //ofLog() << "pushing : " << i;
     }
   }
   

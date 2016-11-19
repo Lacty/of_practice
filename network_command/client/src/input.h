@@ -34,6 +34,22 @@ public:
   void setPushing(int button);
   void setRelease(int button);
   
+  void setPressed(const string& name) {
+    for (auto& i : names_[name]) {
+      setPressed(i);
+    }
+  }
+  void setPushing(const string& name) {
+    for (auto& i : names_[name]) {
+      setPushing(i);
+    }
+  }
+  void setRelease(const string& name) {
+    for (auto& i : names_[name]) {
+      setRelease(i);
+    }
+  }
+  
   bool isPressed(const string& name);
   bool isPushing(const string& name);
   bool isRelease(const string& name);

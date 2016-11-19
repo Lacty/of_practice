@@ -1,0 +1,8 @@
+<Game>
+  <TimeLimit>
+    <MaxTime>1</MaxTime>
+  </TimeLimit>
+  <TimeLimit>
+    <MaxTime>2</MaxTime>
+  </TimeLimit>
+</Game>
